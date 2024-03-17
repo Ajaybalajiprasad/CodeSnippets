@@ -3,7 +3,7 @@
 using namespace std;
 
 
-class Node{
+class Node {
 public:
     int data;
     Node* next;
@@ -23,32 +23,41 @@ public:
         if(head==nullptr){
             head = newNode;
         }else{
-            newNode->next = head;
-            head->prev = newNode;
-            head = newNode;
+            Node* cur = head;
+            while(cur->next!=nullptr){
+                cur = cur->next;
+            }
+            cur->next = newNode;
+            newNode->prev = cur;
         }
         return head;
     }
-};
 
-void display(Node* head){
+    void display(){
     Node* cur = head;
     while(cur!=nullptr){
-        cout<<cur->data<<"->";
+        if(cur->next!=nullptr){
+            cout<<cur->data<<"->";
+        }else{
+            cout<<cur->data;
+        }
         cur = cur->next;
+
     }
 }
+};
+
+
 int main(){
     DoublyLinkedList dil;
-
+    
     dil.insert(6);
     dil.insert(10);
     dil.insert(15);
     dil.insert(3);
 
     cout<<"the doubly linked list is "<<endl;
-    display(dil.head);
-    cout<<endl;
+    dil.display();
+
     return 0;
 }
-```
