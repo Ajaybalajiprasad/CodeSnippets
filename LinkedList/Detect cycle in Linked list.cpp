@@ -60,7 +60,7 @@ int main(){
     ll.head->next->next->next->next->next/*6*/ = ll.head->next->next->next;//4
     //above the 6th Node points to 4 th Node
 
-    
+
 
     if(ll.Cycle()){
         cout<<"The Linked has a cycle"<<endl;
@@ -70,3 +70,7 @@ int main(){
 
     return 0;
 }
+
+
+
+
