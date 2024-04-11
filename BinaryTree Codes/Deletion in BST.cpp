@@ -69,8 +69,9 @@ public:
         if (root == nullptr) {
             return;
         }
-        inorder(root->left);
         cout << root->data << " ";
+        inorder(root->left);
+        
         inorder(root->right);
     }
 };
@@ -99,6 +100,16 @@ int main() {
 
     cout<<"After deleting 10: ";
     // 2 5 7 12 15 20"
+/*  After deleting 10
+
+          5 
+         / \   
+        2   7 
+             \ 
+             15
+            /  \
+           12  20 
+*/
     bst.root = bst.deleteNode(bst.root, 10); // Deleting node with key 10
     bst.inorder(bst.root);
     cout << endl;
