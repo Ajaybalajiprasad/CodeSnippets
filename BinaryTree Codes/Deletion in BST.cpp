@@ -69,9 +69,9 @@ public:
         if (root == nullptr) {
             return;
         }
-        cout << root->data << " ";
-        inorder(root->left);
         
+        inorder(root->left);
+        cout << root->data << " ";
         inorder(root->right);
     }
 };
