@@ -44,7 +44,7 @@ public:
         return save;
     }
 
-    // Helper function to delete a node from BST
+// Helper function to delete a node from BST
     TreeNode* helper(TreeNode* root) {
         if (root->left == nullptr) {
             return root->right;
