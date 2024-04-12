@@ -110,7 +110,9 @@ int main() {
             /  \
            12  20 
 */
-    bst.root = bst.deleteNode(bst.root, 10); // Deleting node with key 10
+
+    int key = 10;
+    bst.root = bst.deleteNode(bst.root, key); // Deleting node with key 10
     bst.inorder(bst.root);
     cout << endl;
 
